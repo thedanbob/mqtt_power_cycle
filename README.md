@@ -29,6 +29,10 @@ tap_action:
     text: Are you sure you want to power cycle this device?
 ```
 
+## Remote reboot
+
+You can reboot the devices via MQTT by sending a message (default: `restart`) manually to the device's command topic (default: `<base topic>/cmd`). Home Assistant provides a way to publish arbitrary messages in Settings > Devices & Services > (MQTT Integration) Configure.
+
 ## Other firmware
 
 [MQTT Light](https://github.com/thedanbob/mqtt_light) \
