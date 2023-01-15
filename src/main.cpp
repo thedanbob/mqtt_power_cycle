@@ -55,12 +55,12 @@ void setup() {
     LOG_LN("\nOTA update done, restarting...");
   });
 
-  ArduinoOTA.onProgress([](size_t progress, size_t total) {
+  ArduinoOTA.onProgress([](auto progress, auto total) {
     LOG_F("Progress: %u%%\r", (progress / (total / 100)));
     linkLED.set((progress / (total / 20)) % 2); // Toggle LED every 5%
   });
 
-  ArduinoOTA.onError([](ota_error_t error) {
+  ArduinoOTA.onError([](auto error) {
     LOG_F("OTA error: [%u] ", error);
     switch(error) {
       case OTA_AUTH_ERROR:
