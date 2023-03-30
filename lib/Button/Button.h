@@ -6,11 +6,11 @@
 
 class Button {
   public:
-    Button(Circuit *c);
-    void begin(bool &updateMode);
+    explicit Button(Circuit* c);
+    void begin(bool& updateMode);
 
   private:
-    Circuit *_circuitPtr;
+    Circuit* _circuitPtr;
     unsigned long _count;
     Ticker _timer;
 };

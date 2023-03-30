@@ -2,14 +2,14 @@
 #include "config.h"
 #include "helper.h"
 
-Button::Button(Circuit *c) :
+Button::Button(Circuit* c) :
   _count{0},
   _timer{Ticker{}}
 {
   _circuitPtr = c;
 }
 
-void Button::begin(bool &updateMode) {
+void Button::begin(bool& updateMode) {
   pinMode(BUTTON, INPUT);
 
   // Put device into update mode (no MQTT) if first button is held during boot
